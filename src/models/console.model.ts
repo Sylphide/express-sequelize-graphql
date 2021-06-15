@@ -1,9 +1,10 @@
-import { Table, Model, Column } from 'sequelize-typescript';
+import { Table, Column } from 'sequelize-typescript';
 import { Field, ObjectType } from 'type-graphql';
+import { Base } from './base.model';
 
 @Table
 @ObjectType()
-export class Console extends Model {
+export class Console extends Base {
   @Field(() => String)
   @Column
   name: string;

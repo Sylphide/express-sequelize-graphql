@@ -34,7 +34,8 @@
     "sequelize": "^6.6.2",
     "sequelize-typescript": "^2.1.0",
     "sqlite3": "^5.0.2",
-    "type-graphql": "^1.1.1"
+    "type-graphql": "^1.1.1",
+    "uuidv4": "^6.2.10"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"

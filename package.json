@@ -2,42 +2,23 @@
   "name": "express-sequelize-graphql",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "build": "tsc",
-    "start": "ts-node ./index.ts",
-    "watch": "nodemon ./index.ts"
+    "build:server": "npm run build --prefix server",
+    "start:server": "npm run start --prefix server",
+    "watch:server": "npm run watch --prefix server",
+    "build:client": "npm run build --prefix client",
+    "start:client": "npm run start --prefix client",
+    "watch:client": "npm run watch --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sylphide/express-sequelize-graphql.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@types/node": "^15.12.2",
-    "@types/validator": "^13.1.4",
-    "husky": "^6.0.0",
-    "lint-staged": "^11.0.0",
-    "nodemon": "^2.0.7",
-    "prettier": "2.3.1",
-    "ts-node": "^10.0.0",
-    "tslint": "^6.1.3",
-    "tslint-config-prettier": "^1.18.0",
-    "tslint-eslint-rules": "^5.4.0",
-    "typescript": "^4.3.2",
-    "vrsource-tslint-rules": "^6.0.0"
+  "bugs": {
+    "url": "https://github.com/Sylphide/express-sequelize-graphql/issues"
   },
-  "dependencies": {
-    "apollo-server": "^2.25.1",
-    "graphql": "^15.5.0",
-    "pg": "^8.6.0",
-    "pg-hstore": "^2.3.4",
-    "reflect-metadata": "^0.1.13",
-    "sequelize": "^6.6.2",
-    "sequelize-typescript": "^2.1.0",
-    "sqlite3": "^5.0.2",
-    "type-graphql": "^1.1.1",
-    "uuidv4": "^6.2.10"
-  },
-  "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
-  }
+  "homepage": "https://github.com/Sylphide/express-sequelize-graphql#readme"
 }

@@ -14,7 +14,8 @@
     "packages/*"
   ],
   "scripts": {
-    "start:server": "lerna run --scope=server --parallel start",
+    "start:server": "lerna run --scope=server --parallel watch",
+    "start:client": "lerna run --scope=client --parallel dev",
     "bootstrap": "lerna bootstrap"
   },
   "bugs": {

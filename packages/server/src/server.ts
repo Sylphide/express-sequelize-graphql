@@ -8,6 +8,8 @@ import { buildSchema } from 'type-graphql';
 export async function server() {
   await sequelize.authenticate();
   await sequelize.sync();
+  const test = Console.build({ name: 'test' });
+  await test.save();
   const schema = await buildSchema({
     resolvers: [ConsoleResolver],
   });

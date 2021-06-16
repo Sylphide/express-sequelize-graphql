@@ -1,0 +1,6 @@
+query {
+  consoles {
+    id,
+    name
+  }
+}

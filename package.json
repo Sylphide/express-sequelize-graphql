@@ -2,14 +2,6 @@
   "name": "express-sequelize-graphql",
   "version": "1.0.0",
   "description": "",
-  "scripts": {
-    "build:server": "npm run build --prefix server",
-    "start:server": "npm run start --prefix server",
-    "watch:server": "npm run watch --prefix server",
-    "build:client": "npm run build --prefix client",
-    "start:client": "npm run start --prefix client",
-    "watch:client": "npm run watch --prefix client"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Sylphide/express-sequelize-graphql.git"
@@ -17,20 +9,29 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start:server": "lerna run --scope=server --parallel start",
+    "bootstrap": "lerna bootstrap"
+  },
   "bugs": {
     "url": "https://github.com/Sylphide/express-sequelize-graphql/issues"
   },
   "homepage": "https://github.com/Sylphide/express-sequelize-graphql#readme",
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
   "devDependencies": {
     "husky": "^6.0.0",
     "lint-staged": "^11.0.0",
     "prettier": "2.3.1",
+    "lerna": "^4.0.0",
     "tslint": "^6.1.3",
     "tslint-config-prettier": "^1.18.0",
     "tslint-eslint-rules": "^5.4.0",
     "vrsource-tslint-rules": "^6.0.0"
-  },
-  "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
   }
 }
